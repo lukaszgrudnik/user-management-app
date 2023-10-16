@@ -1,11 +1,17 @@
 <div class="users">
   <div class="users__top-bar">
     <h1 class="top-bar__header">Users</h1>
+    <a routerLink="create" class="icon-btn">
+      <span class="material-symbols-outlined icon">add</span>
+      <span>Add user</span>
+    </a>
   </div>
   <div class="users__list">
-    <div class="list__user" *ngFor="let user of users | async">
-      <p><span class="text-bold">Name:</span> {{user.name}} <span class="text-bold">Surname:</span> {{user.surname}}</p>
-      <p><span class="text-bold">Age:</span> {{user.age}}</p>
+    <div class="list__user" *ngFor="let user of userService.getUsers() | async">
+      {{user.id}}
+
+      <p><span class="text-bold">Name:</span> {{user?.name}} <span class="text-bold">Surname:</span> {{user?.surname}}</p>
+      <p><span class="text-bold">Age:</span> {{user?.age}}</p>
       <a [routerLink]="['details', user.id]">Details</a>
     </div>
   </div>

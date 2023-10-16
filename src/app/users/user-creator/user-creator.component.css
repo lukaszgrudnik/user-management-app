@@ -1,0 +1,42 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > div:first-child {
+  display: flex;
+}
+
+
+.form__field {
+  padding: .4rem;
+}
+
+.form__field span{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  padding: .4rem;
+}
+
+.form__error-message.touched {
+  color: red;
+  font-size: .65rem;
+  font-weight: bolder;
+}
+
+form input {
+  padding: .4rem 1rem;
+  border: none;
+  box-shadow: 0 0 1px gray;
+  /*border-radius: .2rem;*/
+  outline: none;
+}
+
+form button {
+  outline: none;
+  width: max-content;
+  padding: .4rem 1rem;
+  align-self: center;
+}
