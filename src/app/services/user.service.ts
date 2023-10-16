@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { User } from '../spec/user';
-import { users } from './users';
+import { User } from '../defs/user';
+import { users } from '../data/users';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -10,14 +10,16 @@ export class UserService {
   getUsers(): Observable<User[]> {
     return new Observable(subscriber => {
       subscriber.next(users ?? []);
+      subscriber.complete();
     });
   }
 
-  getUser(id: string): Observable<User> {
+  getUserById(id: string): Observable<User> {
     return new Observable(subscriber => {
       const user: User | undefined = users.find(user => user.id === id);
       if (user) subscriber.next(user);
-      else throw Error;
+      else subscriber.error();
+      subscriber.complete();
     });
   }
 }
