@@ -12,3 +12,8 @@ body {
 .text-bold {
   font-weight: bold;
 }
+
+.card {
+  box-shadow: 0 0 1px gray;
+  padding: 1rem;
+}

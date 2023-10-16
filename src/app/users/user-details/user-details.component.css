@@ -1,0 +1,45 @@
+.user-details-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-details-error > p {
+  font-size: 2rem;
+}
+
+.user-details-error__back  {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+
+  text-decoration: none;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-details__cards {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.user-details__top-bar {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 0 2px gray;
+
+  min-height: 5rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 0 2rem;
+}
