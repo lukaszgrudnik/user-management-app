@@ -1,0 +1,33 @@
+<div class="user-details" *ngIf="user">
+  <div class="user-details__top-bar">
+    <a routerLink="/user/list" class="user-details-error__back">
+      <span class="material-symbols-outlined">arrow_back</span>
+      Back to users list
+    </a>
+  </div>
+  <div class="user-details__cards">
+    <div class="user-details__personal">
+      <h2>Personal data:</h2>
+      <p><span class="text-bold">Name:</span> {{user.name}}</p>
+      <p><span class="text-bold">Surname:</span> {{user.surname}}</p>
+    </div>
+    <div class="user-details__address">
+      <h2>Address:</h2>
+      <p><span class="text-bold">City:</span> {{user.address.city}}</p>
+      <p><span class="text-bold">Postal code:</span> {{user.address.postalCode}}</p>
+      <p><span class="text-bold">Street:</span> {{user.address.street}}</p>
+    </div>
+    <div class="user-details__contact">
+      <h2>Contact:</h2>
+      <p><span class="text-bold">Phone number:</span>{{user.phoneNumber.countryCode}} {{user.phoneNumber.number}}</p>
+      <p><span class="text-bold">Email:</span> {{user.email}}</p>
+    </div>
+  </div>
+</div>
+<div class="user-details-error" *ngIf="!user">
+  <p>Whoopsy! Cannot find user! 😐</p>
+  <a routerLink="/user/list" class="user-details-error__back">
+    <span class="material-symbols-outlined">arrow_back</span>
+    Back to users list
+  </a>
+</div>

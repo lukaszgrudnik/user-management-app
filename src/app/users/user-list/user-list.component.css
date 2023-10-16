@@ -6,7 +6,13 @@
   position: sticky;
   top: 0;
   background-color: white;
-  box-shadow: 0 0 2px gray
+  box-shadow: 0 0 2px gray;
+
+  min-height: 5rem;
+  padding: 0 2rem;
+
+  display: flex;
+  align-items: center;
 }
 
 .top-bar__header {

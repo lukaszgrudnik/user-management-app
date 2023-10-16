@@ -6,7 +6,7 @@
     <div class="list__user" *ngFor="let user of users | async">
       <p><span class="text-bold">Name:</span> {{user.name}} <span class="text-bold">Surname:</span> {{user.surname}}</p>
       <p><span class="text-bold">Age:</span> {{user.age}}</p>
-      <a [routerLink]="['user/details/', user.id]">Details</a>
+      <a [routerLink]="['details', user.id]">Details</a>
     </div>
   </div>
 </div>

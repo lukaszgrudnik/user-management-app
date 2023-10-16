@@ -13,6 +13,16 @@ describe('UserService', () => {
         name: 'Jane',
         surname: 'Smith',
         age: 25,
+        address: {
+          postalCode: '54321',
+          street: '456 Elm St',
+          city: 'Los Angeles',
+        },
+        phoneNumber: {
+          countryCode: '+1',
+          number: '555-234-5678',
+        },
+        email: 'jane.smith@email.com',
       });
     });
   });
