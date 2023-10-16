@@ -1,4 +1,4 @@
-import { User } from '../spec/user';
+import { User } from '../defs/user';
 
 export const users: User[] = [
   {
