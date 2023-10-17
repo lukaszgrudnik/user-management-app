@@ -7,7 +7,7 @@ import { finalize } from 'rxjs';
 export class HttpCoreInterceptor implements HttpCoreInterceptor {
   constructor(private spinnerService: SpinnerService) {}
 
-  intercept(req: HttpRequest<any>, next: HttpHandler) {
+  intercept(req: HttpRequest<unknown>, next: HttpHandler) {
     this.spinnerService.display.next(true);
     return next
       .handle(req)

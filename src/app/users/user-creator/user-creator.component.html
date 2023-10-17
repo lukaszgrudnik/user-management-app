@@ -25,10 +25,11 @@
         </div>
         <div class="fields__field">
           <input class="field__input" placeholder="Age" [min]="18" ngModel #age="ngModel" type="number"
-                 name="number"
+                 name="age"
                  required>
           <div [hidden]="!age.touched" [ngClass]="{touched: age.touched}" class="field__errors">
             <span *ngIf="age.errors?.['required']">Age is required</span>
+            <span *ngIf="age.errors?.['min']">Min. age is 18</span>
           </div>
         </div>
         <div class="fields__field">
@@ -47,7 +48,7 @@
         <div class="fields__field">
           <input class="field__input" ngModel [maxlength]="16" placeholder="Postal code"
                  type="text" name="postalCode" required #postalCode="ngModel">
-          <div [hidden]="!phone.touched" [ngClass]="{touched: postalCode.touched}" class="field__errors">
+          <div [hidden]="!postalCode.touched" [ngClass]="{touched: postalCode.touched}" class="field__errors">
             <span *ngIf="postalCode.errors?.['required']">Postal code is required</span>
           </div>
         </div>
@@ -57,6 +58,8 @@
                  required appPhoneNumber>
           <div [hidden]="!phone.touched" [ngClass]="{touched: phone.touched}" class="field__errors">
             <span *ngIf="phone.errors?.['required']">Phone is required</span>
+            <span *ngIf="phone.errors?.['invalidPhoneNumber']">Phone is invalid</span>
+
           </div>
         </div>
         <div class="fields__field">

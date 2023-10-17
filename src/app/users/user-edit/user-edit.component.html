@@ -1,12 +1,10 @@
 <div *ngIf="user">
-  <!-- Navigation:  -->
   <div class="nav">
     <a routerLink="/user/list" class="nav__return-link">
       <span class="material-symbols-outlined">arrow_back</span>
       <span>Back to users list</span>
     </a>
   </div>
-  <!-- Form -->
   <div class="form-wrapper">
     <h2>Edit user:</h2>
     <form class="form" #editUserForm="ngForm" (ngSubmit)="save()">
@@ -62,7 +60,7 @@
         </div>
         <div class="fields__field">
           <input class="field__input" placeholder="Phone number" #phone="ngModel" ngModel
-                 [(ngModel)]="user.phoneNumber.number" type="text" name="phoneNumber"
+                 [(ngModel)]="user.phoneNumber" type="text" name="phoneNumber"
                  required appPhoneNumber>
           <div [hidden]="!phone.touched" [ngClass]="{touched: phone.touched}" class="field__errors">
             <span *ngIf="phone.errors?.['required']">Phone is required</span>
@@ -78,7 +76,7 @@
           </div>
         </div>
       </div>
-      <button class="button-active">Save</button>
+      <button  class="button-active">Save</button>
     </form>
   </div>
 </div>

@@ -1,6 +1,6 @@
 .nav {
   background-color: var(--nav-background-color);
-  box-shadow: 0 0 2px var(--shadow-color);
+  box-shadow: 0 0 2px var(--box-shadow-color);
 
   min-height: 5rem;
 

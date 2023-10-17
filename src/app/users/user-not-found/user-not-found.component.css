@@ -3,16 +3,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.user-not-found-error > p {
   font-size: 2rem;
+
 }
 
-.user-not-found-error__back  {
+.user-not-found-error__back {
   display: flex;
   align-items: center;
-  gap: .5rem;
-
+  gap: 0.5rem;
   text-decoration: none;
+}
+
+.user-not-found-error__back {
+  font-size: 1rem;
 }

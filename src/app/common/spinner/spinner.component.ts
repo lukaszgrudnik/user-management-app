@@ -3,8 +3,8 @@ import { SpinnerService } from './spinner.service';
 
 @Component({
   selector: 'app-spinner',
-  template: `<div *ngIf="spinnerService.display | async">
-    <span class="spinner"></span>
+  template: `<div class="curtain" *ngIf="spinnerService.display | async">
+    <span class="curtain__spinner"></span>
   </div>`,
   styleUrls: ['./spinner.component.css'],
 })

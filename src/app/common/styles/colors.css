@@ -1,6 +1,9 @@
 :root {
   --nav-background-color: #ffffff;
-  --shadow-color: #919191;
+  --box-shadow-color: #919191;
   --text-error-color: #ff0000;
-  --hover-background-color: #eeeeee;
+  --hovered-background-color: #eeeeee;
+  --curtain-smoke-background: #ECECEC16;
+  --text-dark: #111111;
+  --color-white: #ffffff;
 }

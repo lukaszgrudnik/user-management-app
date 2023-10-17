@@ -21,7 +21,7 @@
 .field__input {
   padding: .4rem 1rem;
   border: none;
-  box-shadow: 0 0 1px var(--shadow-color);
+  box-shadow: 0 0 1px var(--box-shadow-color);
   outline: none;
 }
 

@@ -1,7 +1,7 @@
 .button-active, .icon-button {
   outline: none;
   border: none;
-  box-shadow: 0 0 1px var(--shadow-color);
+  box-shadow: 0 0 1px var(--box-shadow-color);
   transform: scale(.99);
   padding: 0.5rem;
   width: max-content;
@@ -33,5 +33,5 @@
 }
 
 .icon-button:hover {
-  background-color: var(--hover-background-color);
+  background-color: var(--hovered-background-color);
 }

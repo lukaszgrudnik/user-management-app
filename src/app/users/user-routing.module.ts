@@ -5,7 +5,6 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { userDetailsResolver } from './resolvers/user-details.resolver';
 import { UserCreatorComponent } from './user-creator/user-creator.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
-import { UserNotFoundComponent } from './user-not-found/user-not-found.component';
 
 const routes: Routes = [
   {
