@@ -40,3 +40,8 @@
   transition: background-color 100ms 100ms linear;
   background-color: #f1f1f1;
 }
+
+.user__options {
+  display: flex;
+  justify-content: space-between;
+}

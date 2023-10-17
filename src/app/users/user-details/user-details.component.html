@@ -24,10 +24,4 @@
     </div>
   </div>
 </div>
-<div class="user-details-error" *ngIf="!user">
-  <p>Whoopsy! Cannot find user! 😐</p>
-  <a routerLink="/user/list" class="user-details-error__back">
-    <span class="material-symbols-outlined">arrow_back</span>
-    Back to users list
-  </a>
-</div>
+<app-user-not-found *ngIf="!user"/>

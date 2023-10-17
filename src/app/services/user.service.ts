@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { User } from '../defs/user';
 import { Observable } from 'rxjs';
 import { UserDetails } from '../defs/user-details';
-import { HttpParams } from '@angular/common/http';
 import { UserDataService } from './user-data.service';
 
 @Injectable({
@@ -21,5 +20,9 @@ export class UserService {
 
   addUser(userDetails: UserDetails): Observable<void> {
     return this.userDataService.addUser(userDetails);
+  }
+
+  editUser(userDetails: UserDetails) {
+    return this.userDataService.editUser(userDetails);
   }
 }
