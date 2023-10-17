@@ -2,7 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { UserDetails } from '../../defs/user-details';
 import { ActivatedRoute } from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../services/user.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-user-edit',
@@ -15,7 +16,8 @@ export class UserEditComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private userService: UserService
+    private userService: UserService,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -28,10 +30,10 @@ export class UserEditComponent implements OnInit {
     if (this.editUserForm?.valid && this.user) {
       this.userService.editUser(this.user).subscribe({
         next: () => {
-          alert('User data updated');
+          this.toastr.success('User data updated');
         },
         error: () => {
-          alert('Cannot update data ');
+          this.toastr.error('Cannot update data ');
         },
       });
     }

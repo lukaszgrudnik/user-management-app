@@ -8,10 +8,19 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SpinnerComponent } from './common/spinner/spinner.component';
 import { HttpCoreInterceptor } from './core/http-core.interceptor';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, NotFoundComponent, SpinnerComponent],
-  imports: [BrowserModule, AppRoutingModule, UserModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    UserModule,
+    HttpClientModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+  ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
