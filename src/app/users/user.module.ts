@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { PhoneNumberValidator } from './user-creator/validators/phone-number.validator';
 import { UserNotFoundComponent } from './user-not-found/user-not-found.component';
+import { UserService } from './services/user.service';
+import { UserDataService } from './services/user-data.service';
 
 @NgModule({
   declarations: [
@@ -21,5 +23,6 @@ import { UserNotFoundComponent } from './user-not-found/user-not-found.component
   ],
   imports: [CommonModule, RouterLink, UserRoutingModule, FormsModule],
   exports: [UserListComponent],
+  providers: [UserService, UserDataService],
 })
 export class UserModule {}

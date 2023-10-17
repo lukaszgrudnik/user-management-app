@@ -1,6 +1,6 @@
 import { ResolveFn } from '@angular/router';
 import { inject } from '@angular/core';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../services/user.service';
 import { UserDetails } from '../../defs/user-details';
 
 export const userDetailsResolver: ResolveFn<UserDetails | undefined> = (
@@ -8,6 +8,6 @@ export const userDetailsResolver: ResolveFn<UserDetails | undefined> = (
   state,
   userService = inject(UserService)
 ) => {
-  const id = route.params['id'];
+  const id: string = route.params['id'];
   return userService.getUserById(id);
 };

@@ -5,7 +5,6 @@
       <span>Back to users list</span>
     </a>
   </div>
-
   <div class="form-wrapper">
     <h2>Create new user</h2>
     <form class="form" #createUserForm="ngForm" (ngSubmit)="create()">
@@ -59,7 +58,6 @@
           <div [hidden]="!phone.touched" [ngClass]="{touched: phone.touched}" class="field__errors">
             <span *ngIf="phone.errors?.['required']">Phone is required</span>
             <span *ngIf="phone.errors?.['invalidPhoneNumber']">Phone is invalid</span>
-
           </div>
         </div>
         <div class="fields__field">
@@ -68,7 +66,6 @@
           <div [hidden]="!email.touched" [ngClass]="{touched: email.touched}" class="field__errors">
             <span *ngIf="email.errors?.['required']">Email is required</span>
             <span *ngIf="email.errors?.['email']">Email is invalid</span>
-
           </div>
         </div>
       </div>

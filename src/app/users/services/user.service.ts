@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
-import { User } from '../defs/user';
+import { User } from '../../defs/user';
 import { Observable } from 'rxjs';
-import { UserDetails } from '../defs/user-details';
+import { UserDetails } from '../../defs/user-details';
 import { UserDataService } from './user-data.service';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class UserService {
   constructor(private userDataService: UserDataService) {}
 

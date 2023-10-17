@@ -3,6 +3,7 @@
 @import "app/common/styles/colors.css";
 @import "app/common/styles/form.css";
 @import "app/common/styles/navigation.css";
+@import "~node_modules/ngx-toastr/toastr.css";
 
 body {
   margin: 0;
