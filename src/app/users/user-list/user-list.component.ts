@@ -11,7 +11,7 @@ import { User } from '../../defs/user';
 export class UserListComponent implements OnInit {
   users: Observable<User[]> | undefined;
 
-  constructor(private userService: UserService) {}
+  constructor(public userService: UserService) {}
 
   ngOnInit(): void {
     this.users = this.userService.getUsers();

@@ -1,6 +1,4 @@
-import { UserDetails } from '../defs/user-details';
-
-export const usersWithDetails: UserDetails[] = [
+module.exports = [
   {
     id: '1',
     name: 'John',

@@ -1,0 +1,54 @@
+<div>
+  <h2>Create new user</h2>
+  <form #createUserForm="ngForm" (ngSubmit)="create()">
+    <div>
+      <div>
+        <div>
+          <div class="form__field">
+            <input placeholder="Name" ngModel #name="ngModel" type="text" name="name" required>
+            <span [ngClass]="{touched: name.touched}" class="form__error-message" *ngIf="name.invalid&&name.touched">Name is required</span>
+          </div>
+          <div class="form__field">
+            <input placeholder="Surname" ngModel #surname="ngModel" type="text" name="surname" required>
+            <span [ngClass]="{touched: surname.touched}" class="form__error-message"
+                  *ngIf="surname.invalid&&surname.touched">Surname is required</span>
+          </div>
+          <div class="form__field">
+            <input placeholder="Age" [min]="18" ngModel #age="ngModel" type="number" name="number" required>
+            <span [ngClass]="{touched: age.touched}" class="form__error-message" *ngIf="age.invalid&&age.touched">Age is required</span>
+          </div>
+        </div>
+        <div>
+          <div class="form__field">
+            <input ngModel #city="ngModel" placeholder="City" type="text" name="city" required>
+            <span [ngClass]="{touched: city.touched}" class="form__error-message"
+                  *ngIf="city.invalid&&city.touched">City is required</span>
+          </div>
+          <div class="form__field">
+            <input ngModel #street="ngModel" placeholder="Street" type="text" name="street" required>
+            <span [ngClass]="{touched: street.touched}" class="form__error-message"
+                  *ngIf="street.invalid&&city.touched">Street name is required</span>
+          </div>
+          <div class="form__field">
+            <input ngModel [maxlength]="16" #postalCode="ngModel" placeholder="Postal code" type="text" name="postalCode" required>
+            <span [ngClass]="{touched: postalCode.touched}" class="form__error-message"
+                  *ngIf="postalCode.invalid&&postalCode.touched">Postal code is required</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="form__field">
+          <input placeholder="Phone number" #phone="ngModel" ngModel type="text" name="phoneNumber" required>
+          <span [ngClass]="{touched: phone.touched}" class="form__error-message"
+                *ngIf="phone.invalid&&phone.touched">Email is required</span>
+        </div>
+        <div class="form__field">
+          <input ngModel #email="ngModel" [email]="true" placeholder="Email" type="email" name="email" required>
+          <span [ngClass]="{touched: email.touched}" class="form__error-message"
+                *ngIf="email.invalid&&email.touched">Email is required</span>
+        </div>
+      </div>
+    </div>
+    <button>Create</button>
+  </form>
+</div>
