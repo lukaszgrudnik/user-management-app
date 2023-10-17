@@ -1,9 +1,11 @@
 import { UserService } from './user.service';
+import { inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 describe('UserService', () => {
   let service: UserService;
   beforeEach(() => {
-    service = new UserService();
+    // service = new UserService(inject(new HttpClient()));
   });
 
   it('#getUserById should get user with id 2', () => {

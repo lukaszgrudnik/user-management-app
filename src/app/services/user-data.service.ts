@@ -1,25 +1,32 @@
 import { Injectable } from '@angular/core';
 import { User } from '../defs/user';
-import { users } from '../data/users';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { UserDetails } from '../defs/user-details';
-import { usersWithDetails } from '../data/details';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserDataService {
-  users: User[];
-  usersWithDetails: UserDetails[];
-  constructor() {
-    this.users = users;
-    this.usersWithDetails = usersWithDetails;
+  constructor(private httpClient: HttpClient) {}
+
+  getUsers(): Observable<User[]> {
+    return this.httpClient.get<User[]>('http://localhost:3000/user/list');
   }
 
-  getUsers(): User[] {
-    return this.users;
+  getUserWithDetails(id: string): Observable<UserDetails> {
+    return this.httpClient.get<UserDetails>(
+      'http://localhost:3000/user/details',
+      {
+        params: new HttpParams().set('id', id),
+      }
+    );
   }
 
-  getUsersWithDetails(): User[] {
-    return this.usersWithDetails;
+  addUser(userDetails: UserDetails): Observable<void> {
+    return this.httpClient.post<void>(
+      'http://localhost:3000/user/add',
+      userDetails
+    );
   }
 }
