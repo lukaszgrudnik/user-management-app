@@ -18,16 +18,15 @@ export class UserEditComponent implements OnInit {
     private userService: UserService
   ) {}
 
-  save() {
+  ngOnInit(): void {
+    this.user = (this.route.snapshot.data as { user: UserDetails })?.user;
+  }
+
+  save(): void {
     this.editUserForm?.form.markAllAsTouched();
 
     if (this.editUserForm?.valid && this.user) {
-      const userDetails: UserDetails = this.createUserDetails(
-        this.user.id,
-        this.editUserForm
-      );
-
-      this.userService.editUser(userDetails).subscribe({
+      this.userService.editUser(this.user).subscribe({
         next: () => {
           alert('User data updated');
         },
@@ -36,28 +35,5 @@ export class UserEditComponent implements OnInit {
         },
       });
     }
-  }
-
-  createUserDetails(userId: string, form: NgForm) {
-    return {
-      id: userId,
-      name: form.value.name,
-      surname: form.value.surname,
-      age: form.value.age,
-      address: {
-        street: form.value.street,
-        city: form.value.city,
-        postalCode: form.value.postalCode,
-      },
-      phoneNumber: {
-        countryCode: '',
-        number: form.value.phoneNumber,
-      },
-      email: form.value.email,
-    };
-  }
-
-  ngOnInit(): void {
-    this.user = (this.route.snapshot.data as { user: UserDetails })?.user;
   }
 }

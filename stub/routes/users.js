@@ -8,6 +8,7 @@ var path = require('path');
 
 /* GET users listing. */
 router.get('/list', function (req, res, next) {
+  console.log(users);
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify(users));
 });
@@ -20,14 +21,19 @@ router.get('/details', function (req, res, next) {
 });
 
 router.post('/add', function (req, res, next) {
-  usersWithDetails.push(req.body);
-  users.push({
-    id: `${users.length++}`,
-    name: req.body.name,
-    surname: req.body.surname,
-    age: req.body.age
-  })
-  res.end('ok');
+  try {
+    const id = users.length + 1;
+    const {name, surname, age, phoneNumber, city, street, postalCode, email} = req.body;
+    usersWithDetails.push(createUserWithDetails(id, name, surname, age, phoneNumber, {
+      city,
+      street,
+      postalCode
+    }, email));
+    users.push(createUser(id, name, surname, age));
+  } catch (error) {
+    res.status(500).json({error: "Internal server error"});
+  }
+  res.end()
 });
 
 router.post('/edit', function (req, res, next) {
@@ -57,5 +63,26 @@ router.post('/edit', function (req, res, next) {
   }
   res.end();
 });
+
+function createUser(id, name, surname, age) {
+  return {
+    id: `${id}`,
+    name: name,
+    surname: surname,
+    age: age
+  };
+}
+
+function createUserWithDetails(id, name, surname, age, phoneNumber, address, email) {
+  return {
+    id: `${id}`,
+    name: name,
+    surname: surname,
+    age: age,
+    address: address,
+    phoneNumber: phoneNumber,
+    email: email
+  };
+}
 
 module.exports = router;

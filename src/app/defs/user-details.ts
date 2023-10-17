@@ -8,9 +8,6 @@ export interface UserDetails {
     street: string;
     city: string;
   };
-  phoneNumber: {
-    countryCode: string;
-    number: string;
-  };
+  phoneNumber: string;
   email: string;
 }

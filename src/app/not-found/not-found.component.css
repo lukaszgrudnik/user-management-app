@@ -1,19 +1,19 @@
-.user-not-found-error {
+.not-found {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-
 }
 
-.user-not-found-error__back {
+.not-found__message {
+  font-size: 2rem;
+}
+
+.not-found__return-link {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: .5rem;
+
   text-decoration: none;
 }
 
-.user-not-found-error__back {
-  font-size: 1rem;
-}

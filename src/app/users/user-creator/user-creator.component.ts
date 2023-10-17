@@ -17,9 +17,11 @@ export class UserCreatorComponent {
       this.userService.addUser(this.createUserForm.value).subscribe({
         next: () => {
           this.createUserForm?.resetForm({});
+          alert('User created');
         },
         error: () => {
           this.createUserForm?.resetForm({});
+          alert('Error occurred');
         },
       });
     }

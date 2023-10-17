@@ -2,46 +2,42 @@
   position: relative;
 }
 
-.users__top-bar {
+.users__nav {
   position: sticky;
   top: 0;
-  background-color: white;
-  box-shadow: 0 0 2px gray;
-
+  background-color: var(--color-white);
+  box-shadow: 0 0 2px var(--box-shadow-color);
   min-height: 5rem;
   padding: 0 2rem;
-
   display: flex;
   align-items: center;
-
   justify-content: space-between;
 }
 
-.top-bar__header {
+.users__nav .nav__header {
   margin: 0;
   padding: 1rem;
 }
 
 .users__list {
   padding: 1rem;
-
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
-.list__user {
+.users__list .list__user {
   padding: 1rem;
-  box-shadow: 0 0 1px #a8a8a8;
+  box-shadow: 0 0 1px var(--box-shadow-color);
   transition: background-color 500ms 100ms linear;
 }
 
-.list__user:hover {
+.users__list .list__user:hover {
   transition: background-color 100ms 100ms linear;
-  background-color: #f1f1f1;
+  background-color: var(--color-white);
 }
 
-.user__options {
+.users__list .user__options {
   display: flex;
   justify-content: space-between;
 }

@@ -1,68 +1,74 @@
 <div *ngIf="user">
-  <h2>Edit user:</h2>
-  <form class="form" #editUserForm="ngForm" (ngSubmit)="save()">
-    <div>
-      <div>
-        <div>
-          <div class="form__field">
-            <input class="field__input" placeholder="Name" ngModel [ngModel]="user?.name" #name="ngModel" type="text"
-                   name="name" required>
-            <div [hidden]="!name.touched" [ngClass]="{touched: name.touched}" class="field__errors">
-              <span *ngIf="name.errors?.['required']">Name is required</span>
-            </div>
-          </div>
-          <div class="form__field">
-            <input class="field__input" placeholder="Surname" ngModel [ngModel]="user?.surname" #surname="ngModel"
-                   type="text" name="surname"
-                   required>
-            <div [hidden]="!surname.touched" [ngClass]="{touched: surname.touched}" class="field__errors">
-              <span *ngIf="surname.errors?.['required']">Surname is required</span>
-            </div>
-          </div>
-          <div class="form__field">
-            <input class="field__input" placeholder="Age" [min]="18" ngModel [ngModel]="user?.age" #age="ngModel"
-                   type="number" name="number"
-                   required>
-            <div [hidden]="!age.touched" [ngClass]="{touched: age.touched}" class="field__errors">
-              <span *ngIf="age.errors?.['required']">Age is required</span>
-            </div>
+  <div class="nav">
+    <a routerLink="/user/list" class="nav__return-link">
+      <span class="material-symbols-outlined">arrow_back</span>
+      <span>Back to users list</span>
+    </a>
+  </div>
+  <div class="form-wrapper">
+    <h2>Edit user:</h2>
+    <form class="form" #editUserForm="ngForm" (ngSubmit)="save()">
+      <div class="form__fields">
+        <div class="fields__field">
+          <input class="field__input" placeholder="Name" ngModel [(ngModel)]="user.name" #name="ngModel" type="text"
+                 name="name" required>
+          <div [hidden]="!name.touched" [ngClass]="{touched: name.touched}" class="field__errors">
+            <span *ngIf="name.errors?.['required']">Name is required</span>
           </div>
         </div>
-        <div>
-          <div class="form__field">
-            <input class="field__input" ngModel [ngModel]="user?.address?.city" #city="ngModel" placeholder="City"
-                   type="text" name="city" required>
-            <div [hidden]="!city.touched" [ngClass]="{touched: city.touched}" class="field__errors">
-              <span *ngIf="city.errors?.['required']">City is required</span>
-            </div>
-          </div>
-          <div class="form__field">
-            <input class="field__input" #street="ngModel" ngModel [ngModel]="user?.address?.street" placeholder="Street"
-                   type="text" name="street"
-                   required>
-            <div [hidden]="!street.touched" [ngClass]="{touched: street.touched}" class="field__errors">
-              <span *ngIf="street.errors?.['required']">Street code is required</span>
-            </div>
-          </div>
-          <div class="form__field">
-            <input class="field__input" ngModel [ngModel]="user?.address?.postalCode" [maxlength]="16" placeholder="Postal code"
-                   type="text" name="postalCode" required #postalCode="ngModel">
-            <div [hidden]="!phone.touched" [ngClass]="{touched: postalCode.touched}" class="field__errors">
-              <span *ngIf="postalCode.errors?.['required']">Postal code is required</span>
-            </div>
+        <div class="fields__field">
+          <input class="field__input" placeholder="Surname" ngModel [(ngModel)]="user.surname" #surname="ngModel"
+                 type="text" name="surname"
+                 required>
+          <div [hidden]="!surname.touched" [ngClass]="{touched: surname.touched}" class="field__errors">
+            <span *ngIf="surname.errors?.['required']">Surname is required</span>
           </div>
         </div>
-      </div>
-      <div>
-        <div class="form__field">
-          <input class="field__input" placeholder="Phone number" #phone="ngModel" ngModel [ngModel]="user?.phoneNumber?.number" type="text" name="phoneNumber"
+        <div class="fields__field">
+          <input class="field__input" placeholder="Age" [min]="18" ngModel [(ngModel)]="user.age" #age="ngModel"
+                 type="number" name="number"
+                 required>
+          <div [hidden]="!age.touched" [ngClass]="{touched: age.touched}" class="field__errors">
+            <span *ngIf="age.errors?.['required']">Age is required</span>
+          </div>
+        </div>
+
+        <div class="fields__field">
+          <input class="field__input" ngModel [(ngModel)]="user.address.city" #city="ngModel" placeholder="City"
+                 type="text" name="city" required>
+          <div [hidden]="!city.touched" [ngClass]="{touched: city.touched}" class="field__errors">
+            <span *ngIf="city.errors?.['required']">City is required</span>
+          </div>
+        </div>
+        <div class="fields__field">
+          <input class="field__input" #street="ngModel" ngModel [(ngModel)]="user.address.street"
+                 placeholder="Street"
+                 type="text" name="street"
+                 required>
+          <div [hidden]="!street.touched" [ngClass]="{touched: street.touched}" class="field__errors">
+            <span *ngIf="street.errors?.['required']">Street code is required</span>
+          </div>
+        </div>
+        <div class="fields__field">
+          <input class="field__input" ngModel [(ngModel)]="user.address.postalCode" [maxlength]="16"
+                 placeholder="Postal code"
+                 type="text" name="postalCode" required #postalCode="ngModel">
+          <div [hidden]="!phone.touched" [ngClass]="{touched: postalCode.touched}" class="field__errors">
+            <span *ngIf="postalCode.errors?.['required']">Postal code is required</span>
+          </div>
+
+        </div>
+        <div class="fields__field">
+          <input class="field__input" placeholder="Phone number" #phone="ngModel" ngModel
+                 [(ngModel)]="user.phoneNumber" type="text" name="phoneNumber"
                  required appPhoneNumber>
           <div [hidden]="!phone.touched" [ngClass]="{touched: phone.touched}" class="field__errors">
             <span *ngIf="phone.errors?.['required']">Phone is required</span>
+            <span *ngIf="phone.errors?.['invalidPhoneNumber']">Invalid phone number</span>
           </div>
         </div>
-        <div class="form__field">
-          <input class="field__input" ngModel [ngModel]="user?.email" [email]="true" placeholder="Email" type="email"
+        <div class="fields__field">
+          <input class="field__input" ngModel [(ngModel)]="user.email" [email]="true" placeholder="Email" type="email"
                  name="email" required #email="ngModel">
           <div [hidden]="!email.touched" [ngClass]="{touched: email.touched}" class="field__errors">
             <span *ngIf="email.errors?.['required']">Email is required</span>
@@ -70,8 +76,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <button class="btn">Save</button>
-  </form>
+      <button  class="button-active">Save</button>
+    </form>
+  </div>
 </div>
 <app-user-not-found *ngIf="!user"/>

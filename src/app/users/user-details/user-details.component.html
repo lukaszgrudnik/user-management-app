@@ -1,8 +1,8 @@
 <div class="user-details" *ngIf="user">
-  <div class="user-details__top-bar">
-    <a routerLink="/user/list" class="user-details-error__back">
+  <div class="nav">
+    <a routerLink="/user/list" class="nav__return-link">
       <span class="material-symbols-outlined">arrow_back</span>
-      Back to users list
+      <span>Back to users list</span>
     </a>
   </div>
   <div class="user-details__cards">
@@ -19,7 +19,7 @@
     </div>
     <div class="user-details__contact">
       <h2>Contact:</h2>
-      <p><span class="text-bold">Phone number:</span>{{user.phoneNumber.countryCode}} {{user.phoneNumber.number}}</p>
+      <p><span class="text-bold">Phone number:</span>{{user.phoneNumber}}</p>
       <p><span class="text-bold">Email:</span> {{user.email}}</p>
     </div>
   </div>

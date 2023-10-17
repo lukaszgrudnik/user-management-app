@@ -1,4 +1,4 @@
-module.exports = [
+module.exports  = [
   {
     id: '1',
     name: 'John',
@@ -9,10 +9,7 @@ module.exports = [
       street: '123 Main St',
       city: 'New York',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-123-4567',
-    },
+    phoneNumber: '5551234567',
     email: 'john.doe@email.com',
   },
   {
@@ -25,10 +22,7 @@ module.exports = [
       street: '456 Elm St',
       city: 'Los Angeles',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-234-5678',
-    },
+    phoneNumber: '5552345678',
     email: 'jane.smith@email.com',
   },
   {
@@ -41,10 +35,7 @@ module.exports = [
       street: '789 Oak St',
       city: 'Chicago',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-345-6789',
-    },
+    phoneNumber: '5553456789',
     email: 'alice.johnson@email.com',
   },
   {
@@ -57,10 +48,7 @@ module.exports = [
       street: '234 Birch St',
       city: 'Houston',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-456-7890',
-    },
+    phoneNumber: '5554567890',
     email: 'bob.brown@email.com',
   },
   {
@@ -73,10 +61,7 @@ module.exports = [
       street: '567 Pine St',
       city: 'San Francisco',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-567-8901',
-    },
+    phoneNumber: '5555678901',
     email: 'ella.davis@email.com',
   },
   {
@@ -89,10 +74,7 @@ module.exports = [
       street: '876 Elm St',
       city: 'Miami',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-678-9012',
-    },
+    phoneNumber: '5556789012',
     email: 'david.wilson@email.com',
   },
   {
@@ -105,10 +87,7 @@ module.exports = [
       street: '234 Cedar St',
       city: 'Seattle',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-789-0123',
-    },
+    phoneNumber: '5557890123',
     email: 'grace.lee@email.com',
   },
   {
@@ -121,10 +100,7 @@ module.exports = [
       street: '789 Pine St',
       city: 'Austin',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-890-1234',
-    },
+    phoneNumber: '5558901234',
     email: 'michael.taylor@email.com',
   },
   {
@@ -137,10 +113,7 @@ module.exports = [
       street: '123 Oak St',
       city: 'Boston',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-901-2345',
-    },
+    phoneNumber: '5559012345',
     email: 'sophia.evans@email.com',
   },
   {
@@ -153,10 +126,7 @@ module.exports = [
       street: '456 Birch St',
       city: 'Denver',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-012-3456',
-    },
+    phoneNumber: '5550123456',
     email: 'william.anderson@email.com',
   },
   {
@@ -169,10 +139,7 @@ module.exports = [
       street: '987 Pine St',
       city: 'Portland',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-123-4567',
-    },
+    phoneNumber: '5551234567',
     email: 'olivia.miller@email.com',
   },
   {
@@ -185,10 +152,7 @@ module.exports = [
       street: '123 Cedar St',
       city: 'San Diego',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-234-5678',
-    },
+    phoneNumber: '5552345678',
     email: 'james.moore@email.com',
   },
   {
@@ -201,10 +165,7 @@ module.exports = [
       street: '456 Oak St',
       city: 'Las Vegas',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-345-6789',
-    },
+    phoneNumber: '5553456789',
     email: 'ava.harris@email.com',
   },
   {
@@ -217,10 +178,7 @@ module.exports = [
       street: '789 Elm St',
       city: 'Phoenix',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-456-7890',
-    },
+    phoneNumber: '5554567890',
     email: 'joseph.thomas@email.com',
   },
   {
@@ -233,10 +191,7 @@ module.exports = [
       street: '123 Pine St',
       city: 'Philadelphia',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-567-8901',
-    },
+    phoneNumber: '5555678901',
     email: 'emily.white@email.com',
   },
   {
@@ -249,10 +204,7 @@ module.exports = [
       street: '456 Cedar St',
       city: 'San Antonio',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-678-9012',
-    },
+    phoneNumber: '5556789012',
     email: 'daniel.martin@email.com',
   },
   {
@@ -265,10 +217,7 @@ module.exports = [
       street: '789 Pine St',
       city: 'Houston',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-789-0123',
-    },
+    phoneNumber: '5557890123',
     email: 'mia.clark@email.com',
   },
   {
@@ -281,10 +230,7 @@ module.exports = [
       street: '234 Elm St',
       city: 'Los Angeles',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-890-1234',
-    },
+    phoneNumber: '5558901234',
     email: 'christopher.walker@email.com',
   },
   {
@@ -297,10 +243,7 @@ module.exports = [
       street: '567 Cedar St',
       city: 'New York',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-901-2345',
-    },
+    phoneNumber: '5559012345',
     email: 'lily.baker@email.com',
   },
   {
@@ -313,10 +256,7 @@ module.exports = [
       street: '123 Oak St',
       city: 'Chicago',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-012-3456',
-    },
+    phoneNumber: '5550123456',
     email: 'benjamin.adams@email.com',
   },
   {
@@ -329,10 +269,7 @@ module.exports = [
       street: '789 Pine St',
       city: 'Los Angeles',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-123-4567',
-    },
+    phoneNumber: '5551234567',
     email: 'liam.parker@email.com',
   },
   {
@@ -345,10 +282,7 @@ module.exports = [
       street: '456 Elm St',
       city: 'San Francisco',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-234-5678',
-    },
+    phoneNumber: '5552345678',
     email: 'sophia.wright@email.com',
   },
   {
@@ -361,10 +295,7 @@ module.exports = [
       street: '567 Oak St',
       city: 'New York',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-345-6789',
-    },
+    phoneNumber: '5553456789',
     email: 'noah.young@email.com',
   },
   {
@@ -377,10 +308,7 @@ module.exports = [
       street: '789 Elm St',
       city: 'Chicago',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-456-7890',
-    },
+    phoneNumber: '5554567890',
     email: 'olivia.hall@email.com',
   },
   {
@@ -393,10 +321,7 @@ module.exports = [
       street: '123 Pine St',
       city: 'Los Angeles',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-567-8901',
-    },
+    phoneNumber: '5555678901',
     email: 'jackson.green@email.com',
   },
   {
@@ -409,10 +334,7 @@ module.exports = [
       street: '456 Cedar St',
       city: 'San Francisco',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-678-9012',
-    },
+    phoneNumber: '5556789012',
     email: 'emma.collins@email.com',
   },
   {
@@ -425,10 +347,7 @@ module.exports = [
       street: '567 Pine St',
       city: 'New York',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-789-1234',
-    },
+    phoneNumber: '5557891234',
     email: 'aiden.king@email.com',
   },
   {
@@ -441,10 +360,7 @@ module.exports = [
       street: '123 Oak St',
       city: 'Chicago',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-901-2345',
-    },
+    phoneNumber: '5559012345',
     email: 'chloe.perez@email.com',
   },
   {
@@ -457,10 +373,7 @@ module.exports = [
       street: '456 Elm St',
       city: 'Los Angeles',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-012-3456',
-    },
+    phoneNumber: '5550123456',
     email: 'lucas.turner@email.com',
   },
   {
@@ -473,10 +386,7 @@ module.exports = [
       street: '567 Cedar St',
       city: 'San Francisco',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-123-4567',
-    },
+    phoneNumber: '5551234567',
     email: 'avery.gonzalez@email.com',
   },
   {
@@ -489,10 +399,7 @@ module.exports = [
       street: '789 Pine St',
       city: 'New York',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-234-5678',
-    },
+    phoneNumber: '5552345678',
     email: 'liam.stewart@email.com',
   },
   {
@@ -505,138 +412,111 @@ module.exports = [
       street: '123 Oak St',
       city: 'Los Angeles',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-345-6789',
-    },
+    phoneNumber: '5553456789',
     email: 'harper.price@email.com',
   },
   {
     id: '33',
-    name: 'Mason',
-    surname: 'Murphy',
-    age: 35,
+    name: 'Mia',
+    surname: 'Clark',
+    age: 21,
     address: {
       postalCode: '87654',
-      street: '456 Elm St',
-      city: 'Chicago',
+      street: '789 Pine St',
+      city: 'Houston',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-456-7890',
-    },
-    email: 'mason.murphy@email.com',
+    phoneNumber: '5557890123',
+    email: 'mia.clark@email.com',
   },
   {
     id: '34',
-    name: 'Ella',
-    surname: 'Cruz',
-    age: 30,
+    name: 'Christopher',
+    surname: 'Walker',
+    age: 38,
     address: {
-      postalCode: '23456',
-      street: '567 Cedar St',
-      city: 'San Francisco',
+      postalCode: '12345',
+      street: '234 Elm St',
+      city: 'Los Angeles',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-567-8901',
-    },
-    email: 'ella.cruz@email.com',
+    phoneNumber: '5558901234',
+    email: 'christopher.walker@email.com',
   },
   {
     id: '35',
-    name: 'Ethan',
-    surname: 'Scott',
-    age: 29,
+    name: 'Lily',
+    surname: 'Baker',
+    age: 20,
     address: {
-      postalCode: '76543',
-      street: '789 Pine St',
+      postalCode: '54321',
+      street: '567 Cedar St',
       city: 'New York',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-678-9012',
-    },
-    email: 'ethan.scott@email.com',
+    phoneNumber: '5559012345',
+    email: 'lily.baker.email.com',
   },
   {
     id: '36',
-    name: 'Abigail',
-    surname: 'Bailey',
-    age: 28,
-    address: {
-      postalCode: '12345',
-      street: '123 Main St',
-      city: 'Los Angeles',
-    },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-789-1234',
-    },
-    email: 'abigail.bailey@email.com',
-  },
-  {
-    id: '37',
-    name: 'Logan',
-    surname: 'Ward',
+    name: 'Benjamin',
+    surname: 'Adams',
     age: 34,
     address: {
-      postalCode: '54321',
-      street: '456 Elm St',
-      city: 'San Francisco',
-    },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-890-1234',
-    },
-    email: 'logan.ward@email.com',
-  },
-  {
-    id: '38',
-    name: 'Ava',
-    surname: 'Ross',
-    age: 25,
-    address: {
       postalCode: '23456',
-      street: '789 Cedar St',
-      city: 'New York',
-    },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-901-2345',
-    },
-    email: 'ava.ross@email.com',
-  },
-  {
-    id: '39',
-    name: 'Carter',
-    surname: 'Wood',
-    age: 33,
-    address: {
-      postalCode: '98765',
       street: '123 Oak St',
       city: 'Chicago',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-012-3456',
-    },
-    email: 'carter.wood@email.com',
+    phoneNumber: '5550123456',
+    email: 'benjamin.adams@email.com',
   },
   {
-    id: '40',
-    name: 'Isabella',
-    surname: 'James',
-    age: 26,
+    id: '37',
+    name: 'Liam',
+    surname: 'Parker',
+    age: 27,
+    address: {
+      postalCode: '76543',
+      street: '789 Pine St',
+      city: 'Los Angeles',
+    },
+    phoneNumber: '5551234567',
+    email: 'liam.parker@email.com',
+  },
+  {
+    id: '38',
+    name: 'Sophia',
+    surname: 'Wright',
+    age: 31,
     address: {
       postalCode: '34567',
       street: '456 Elm St',
-      city: 'Los Angeles',
+      city: 'San Francisco',
     },
-    phoneNumber: {
-      countryCode: '+1',
-      number: '555-234-5678',
-    },
-    email: 'isabella.james@email.com',
+    phoneNumber: '5552345678',
+    email: 'sophia.wright@email.com',
   },
+  {
+    id: '39',
+    name: 'Noah',
+    surname: 'Young',
+    age: 29,
+    address: {
+      postalCode: '54321',
+      street: '567 Oak St',
+      city: 'New York',
+    },
+    phoneNumber: '5553456789',
+    email: 'noah.young@email.com',
+  },
+  {
+    id: '40',
+    name: 'Olivia',
+    surname: 'Hall',
+    age: 25,
+    address: {
+      postalCode: '23456',
+      street: '789 Elm St',
+      city: 'Chicago',
+    },
+    phoneNumber: '5554567890',
+    email: 'olivia.hall@email.com',
+  }
 ];

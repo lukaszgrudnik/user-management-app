@@ -2,6 +2,7 @@
 @import "app/common/styles/buttons.css";
 @import "app/common/styles/colors.css";
 @import "app/common/styles/form.css";
+@import "app/common/styles/navigation.css";
 
 body {
   margin: 0;
