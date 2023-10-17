@@ -29,4 +29,11 @@ export class UserDataService {
       userDetails
     );
   }
+
+  editUser(userDetails: UserDetails) {
+    return this.httpClient.post<void>(
+      'http://localhost:3000/user/edit',
+      userDetails
+    );
+  }
 }

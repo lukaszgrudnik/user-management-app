@@ -4,6 +4,8 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { userDetailsResolver } from './resolvers/user-details.resolver';
 import { UserCreatorComponent } from './user-creator/user-creator.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
+import { UserNotFoundComponent } from './user-not-found/user-not-found.component';
 
 const routes: Routes = [
   {
@@ -18,6 +20,11 @@ const routes: Routes = [
   {
     path: 'list/create',
     component: UserCreatorComponent,
+  },
+  {
+    path: 'list/edit/:id',
+    component: UserEditComponent,
+    resolve: { user: userDetailsResolver },
   },
 ];
 

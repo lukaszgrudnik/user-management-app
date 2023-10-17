@@ -6,9 +6,19 @@ import { UserRoutingModule } from './user-routing.module';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserCreatorComponent } from './user-creator/user-creator.component';
 import { FormsModule } from '@angular/forms';
+import { UserEditComponent } from './user-edit/user-edit.component';
+import { PhoneNumberValidator } from './user-creator/validators/phone-number.validator';
+import { UserNotFoundComponent } from './user-not-found/user-not-found.component';
 
 @NgModule({
-  declarations: [UserListComponent, UserDetailsComponent, UserCreatorComponent],
+  declarations: [
+    UserListComponent,
+    UserDetailsComponent,
+    UserCreatorComponent,
+    UserEditComponent,
+    PhoneNumberValidator,
+    UserNotFoundComponent,
+  ],
   imports: [CommonModule, RouterLink, UserRoutingModule, FormsModule],
   exports: [UserListComponent],
 })
