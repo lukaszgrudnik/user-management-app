@@ -1,10 +1,12 @@
 <div class="user-details" *ngIf="user">
-  <div class="user-details__top-bar">
-    <a routerLink="/user/list" class="user-details-error__back">
+  <!-- Navigation -->
+  <div class="nav">
+    <a routerLink="/user/list" class="nav__return-link">
       <span class="material-symbols-outlined">arrow_back</span>
-      Back to users list
+      <span>Back to users list</span>
     </a>
   </div>
+  <!-- Details: -->
   <div class="user-details__cards">
     <div class="user-details__personal">
       <h2>Personal data:</h2>

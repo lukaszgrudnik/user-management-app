@@ -1,28 +1,32 @@
+.form-wrapper {
+  padding: .5rem;
+}
+
 .form {
-  display: flex;
-  flex-direction: column;
-
-  width: max-content;
-  padding: .4rem;
+  padding: .5rem;
 }
 
-.form > div:first-child {
-  display: flex;
+.form__fields {
+  display: grid;
+  grid-template-columns: repeat(2, max-content); /* 2 columns with equal width */
+  gap: 1rem;
+  padding: 1rem 0 ;
 }
 
-.form__field {
-  padding: .4rem 0;
+.fields__field {
+  height: 2rem;
+  padding: .1rem 0;
 }
 
 .field__input {
   padding: .4rem 1rem;
   border: none;
-  box-shadow: 0 0 1px gray;
+  box-shadow: 0 0 1px var(--shadow-color);
   outline: none;
 }
 
 .field__errors.touched > span {
-  color: red;
+  color: var(--text-error-color);
   font-size: .65rem;
   font-weight: bolder;
 }
